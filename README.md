@@ -2,10 +2,15 @@
 Repositorio para el Hackathon - Crea tu PL de Código Facilito 🐊
 
 
-Commands:
+Comandos:
+
+* Para leer documento PDF.
 ~~~
 info = read_pdf('filename.pdf') # Leer documento pdf
+~~~
 
+* Para imprimir en consola los datos del PDF.
+~~~
 print(info) # Se imprime en consola los datos que contiene el pdf
 Output:
 {
@@ -18,9 +23,15 @@ Output:
     "Country": "Mexico",
     "phonenumber": "1234567890"
 }
+~~~
 
+* Para actualizar datos del PDF.
+~~~
 info['name'] = 'Cody' # Se actualiza la información
+~~~
 
+* Para agregar información que no contiene el PDF.
+~~~
 education_info = {
     "title_obtained": "Espadachín Maestro",
     "description": "Entrenamiento intensivo en técnicas de espada y combate cuerpo a cuerpo.",
@@ -39,7 +50,4 @@ education_info = {
 }
 
 dicc['education'] = education_info # Se agrega nueva información no contenida en el PDF
-
-
-
 ~~~
