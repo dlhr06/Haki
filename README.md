@@ -51,3 +51,12 @@ education_info = {
 
 dicc['education'] = education_info # Se agrega nueva información no contenida en el PDF
 ~~~
+
+* Agregar la ruta de postulación (no es un comando, es una variable)
+
+~~~
+url = 'dirección de postulación'
+~~~
+
+* La creación de una nueva cuenta ``NO está disponible``, debe crear su cuenta previamente en caso de que la página de postulación lo requiera.
+* Datos para iniciar sesión 
