@@ -6,13 +6,11 @@ Comandos:
 
 * Para leer documento PDF.
 ~~~
-info = read_pdf('filename.pdf') # Leer documento pdf
+haki read_pdf "filename.pdf"
 ~~~
 
-* Para imprimir en consola los datos del PDF.
+Al leer el documento PDF, se crea un archivo json (**YAML en lugar de json**) con el nombre del PDF más "_haki". Ejemplo: cv_zoro_roronoa.pdf -> cv_zoro_roronoa_haki.json. El archivo json contiene la información del pdf, como se muestra a continuación:
 ~~~
-print(info) # Se imprime en consola los datos que contiene el pdf
-Output:
 {
     "name": "Zoro",
     "lastname": "Roronoa",
@@ -25,38 +23,55 @@ Output:
 }
 ~~~
 
-* Para actualizar datos del PDF.
+Si desea crear, actualizar o borrar un dato puede hacerlo directamente en el archivo json. A continuación, se actualiza el nombre y se agrega información de la educación:
 ~~~
-info['name'] = 'Cody' # Se actualiza la información
-~~~
-
-* Para agregar información que no contiene el PDF.
-~~~
-education_info = {
-    "title_obtained": "Espadachín Maestro",
-    "description": "Entrenamiento intensivo en técnicas de espada y combate cuerpo a cuerpo.",
-    "institution": "Shimotsuki Dojo Sword School",
-    "location": "Shimotsuki Island",
-    "start_date": {
-        "day": 1,
-        "month": 1,
-        "year": 2000
-    },
-    "end_date": {
-        "day": 31,
-        "month": 12,
-        "year": 2005
+{
+    "name": "Cody",
+    "lastname": "Roronoa",
+     "Age": 21,
+    "Address": "Calle Espada Samurai No. 3",
+    "City": "Onigashima",
+    "State": "Wano",
+    "Country": "Mexico",
+    "phonenumber": "1234567890",
+    education: {
+        "title_obtained": "Espadachín Maestro",
+        "description": "Entrenamiento intensivo en técnicas de espada y combate cuerpo a cuerpo.",
+        "institution": "Shimotsuki Dojo Sword School",
+        "location": "Shimotsuki Island",
+        "start_date": {
+            "day": 1,
+            "month": 1,
+            "year": 2000
+        },
+        "end_date": {
+            "day": 31,
+            "month": 12,
+            "year": 2005
+        }
     }
 }
-
-dicc['education'] = education_info # Se agrega nueva información no contenida en el PDF
 ~~~
 
-* Agregar la ruta de postulación (no es un comando, es una variable)
+
+**Proximamente**
+* Realizar postulación en una página
 
 ~~~
-url = 'dirección de postulación'
+haki apply_for "filename_haki.json" "www.url.com"
 ~~~
 
-* La creación de una nueva cuenta ``NO está disponible``, debe crear su cuenta previamente en caso de que la página de postulación lo requiera.
-* Datos para iniciar sesión 
+En caso de que la página requiera postularse mediante una cuenta, esta deberá crearse previamente y agregar los datos de inicio en un nuevo archivo json. Por ejemplo, en el siguiente archivo json, llamado ``login_credentials.json``, se muestra el correo y la contraseña utilizados para iniciar sesión en la página de postulación:
+~~~
+{
+"mail": "roronoa_zoro@mugiwara-no-ichimi.com
+"password": "miCapitanSeraElReyDeLosPiratas!"
+}
+~~~
+
+Cuando se realiza postulación con una cuenta, se agrega el json de las credenciales:
+~~~
+haki apply_for "filename_haki.json" "www.url.com" "login_credentials.json"
+~~~
+
+**Este lenguaje no almacena ni comparte tu información**
