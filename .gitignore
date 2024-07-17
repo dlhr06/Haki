@@ -1,1 +1,4 @@
 venv
+cv*
+__pycache__
+ejemplo_yaml.yaml
