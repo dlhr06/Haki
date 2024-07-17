@@ -51,6 +51,14 @@ education:
 
 
 **Proximamente**
+* Ingresar página donde se encuentra la información de la postulación. Mediante LLM (publico o privado) realizar sugerencias a la información del CV (crea un nuevo yaml con las sugerencias) y proporcionar porcentaje de ajuste con el puesto
+~~~
+haki check_position filename_haki.yaml www.url.com
+
+output:
+Tu CV se ajusta 100% a la posición!.
+~~~
+
 * Realizar postulación en una página
 
 ~~~
