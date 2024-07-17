@@ -1,7 +1,7 @@
 from lark import Lark
 from evaluator import Evaluator
+from grammar import grammar
 
-grammar = open('grammar.lark').read()
 parser = Lark(grammar, parser='lalr', transformer=Evaluator())
 
 def parse_expression(expression):
