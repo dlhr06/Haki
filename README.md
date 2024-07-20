@@ -55,7 +55,11 @@ education:
   ~~~
   haki get_professional_resume filename_haki.yaml
   ~~~
-
+  
+* Generar carta de motivaciones. El resumen se genera con base al archivo yaml generado previamente y la información del puesto de trabajo al que se desea aplicar (ulr).
+  ~~~
+  haki get_professional_resume filename_haki.yaml www.url.com
+  ~~~
 
 * Ingresar página donde se encuentra la información de la postulación. Mediante LLM (publico o privado) realizar sugerencias a la información del CV (crea un nuevo yaml con las sugerencias) y proporcionar porcentaje de ajuste con el puesto
 ~~~
