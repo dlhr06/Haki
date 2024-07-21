@@ -72,7 +72,7 @@ Tu CV se ajusta 100% a la posición!.
 * Realizar postulación en una página
 
 ~~~
-haki apply_for filename_haki.yaml www.url.com
+haki apply_for_job filename_haki.yaml www.url.com
 ~~~
 
 En caso de que la página requiera postularse mediante una cuenta, esta deberá crearse previamente y agregar los datos de inicio en un nuevo archivo yaml. Por ejemplo, en el siguiente archivo yaml, llamado ``login_credentials.yaml``, se muestra el correo y la contraseña utilizados para iniciar sesión en la página de postulación:
