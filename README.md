@@ -53,7 +53,7 @@ education:
 **Proximamente**
 * Generar resumen profesional para proporcionar una visión general de tus habilidades y logros. El resumen se genera con base al archivo yaml generado previamente.
   ~~~
-  haki get_professional_resume filename_haki.yaml
+  haki get_professional_summary filename_haki.yaml
   ~~~
   
 * Generar carta de motivaciones. El resumen se genera con base al archivo yaml generado previamente y la información del puesto de trabajo al que se desea aplicar (ulr).
