@@ -1,4 +1,8 @@
-venv
-cv*
 __pycache__
-ejemplo_yaml.yaml
+venv/*
+build/*
+dist/*
+*.spec
+*.ico
+*.yaml
+*.pdf
