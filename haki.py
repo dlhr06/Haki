@@ -1,10 +1,14 @@
 import argparse
-from haki_parser import parse_expression
-
 import locale
 
+from haki_parser import parse_expression
+from language_dictionary import (description, commands, command_read_pdf, command_get_professional_summary,
+                                command_get_motivation_letter, command_apply_for_job, 
+                                arg_pdf_filename, arg_yaml_filename, arg_url
+                                )
+
 def main():
-    default_locale, _ = locale.getdefaultlocale()
+    default_locale, _ = locale.getlocale()
     language = ''
     if default_locale.startswith('es'):
         language = 'es'
@@ -13,47 +17,36 @@ def main():
     else:
         language = 'en'
         
-    description = {
-        'es': 'Identifica la información de tu Curriculum Vitae en formato PDF.',
-        'en': 'Identify the information of your Curriculum Vitae in PDF format.',
-        'fr': "Identifiez l'information de votre Curriculum Vitae au format PDF."
-    }
-    command_help = {
-        'es': 'Comando a ejecutar, por ejemplo: read_pdf.',
-        'en': 'Command to execute, for example: read_pdf.',
-        'fr': 'Commande à exécuter, par exemple: read_pdf.'        
-    }
-    filename_help = {
-        'es': 'Archivo a procesar.',
-        'en': 'File to process.',
-        'fr': 'Fichier à traiter.'
-    }
-    from_language_help = {
-        'es': 'Lenguaje de origen.',
-        'en': 'Source language.',
-        'fr': 'Langue source.'
-    }
-    
-    to_language_help = {
-        'es': 'Lenguaje de destino.',
-        'en': 'Target language.',
-        'fr': 'Langue de destination.'
-    }
-        
     # Configura el parser de argumentos
-    parser = argparse.ArgumentParser(description=description.get(language))
-    parser.add_argument('command', type=str, help=command_help.get(language))
-    parser.add_argument('filename', type=str, help=filename_help.get(language))
-    parser.add_argument('-x', '--from_language', type=str, help=from_language_help.get(language), default='es')
-    parser.add_argument('-y','--to_language', type=str, help=to_language_help.get(language), default='es')
+    parser = argparse.ArgumentParser(description=description.get(language), formatter_class=argparse.ArgumentDefaultsHelpFormatter, epilog='Haki v0.1.0' )
+
+    # Definir subparsers para cada comando
+    subparsers = parser.add_subparsers(dest='command', help=commands.get(language))
+    
+    # Comando read_pdf
+    parser_read_pdf = subparsers.add_parser('read_pdf', help=command_read_pdf.get(language))
+    parser_read_pdf.add_argument('filename', type=str, help=arg_pdf_filename.get(language))
+    
+    # Comando get_professional_summary
+    parser_get_professional_summary = subparsers.add_parser('get_professional_summary', help=command_get_professional_summary.get(language))
+    parser_get_professional_summary.add_argument('filename', type=str, help=arg_yaml_filename.get(language))
+
+    # Comando get_motivation_letter
+    parser_get_motivation_letter = subparsers.add_parser('get_motivation_letter', help=command_get_motivation_letter.get(language))
+    parser_get_motivation_letter.add_argument('filename', type=str, help=arg_yaml_filename.get(language))
+
+    # Comando apply_for_job
+    parser_apply_for_job = subparsers.add_parser('apply_for_job', help=command_apply_for_job.get(language))
+    parser_apply_for_job.add_argument('filename', type=str, help=arg_yaml_filename.get(language))
+    parser_apply_for_job.add_argument('url', type=str, help=arg_url.get(language))
 
     # Parsea los argumentos de la línea de comandos
     args = parser.parse_args()
-
-    # Ejecuta la función parse_expression con los argumentos de la línea de comandos
-    parse_expression(f'{args.command} {args.filename}')
-    
-    
+        
+    if args.command == 'apply_for_job':
+        parse_expression(f'{args.command} {args.filename} {args.url}')
+    else:
+        print(parse_expression(f'{args.command} {args.filename}'))
     
 if __name__ == '__main__':
     main()
