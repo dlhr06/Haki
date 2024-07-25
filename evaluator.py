@@ -2,7 +2,7 @@ from lark import Transformer,v_args
 import yaml
 import os
 
-from semantic import file_exists, is_valid_url
+from semantic import file_exists
 
 class Evaluator(Transformer):
     def start(self, expression:str) -> str:
