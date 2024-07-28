@@ -18,7 +18,7 @@ Haki es un innovador lenguaje de dominio específico (SDL) diseñado específica
 
 ## Instalación
 
-[Instala nuestro ejecutable y comienza a gestionar la información de tu CV de manera eficaz_](https://drive.google.com/file/d/1kTEz6pPqFvE9S9lor_GgXzbIcnmdQJFT/view?usp=drive_link)
+[Instala nuestro ejecutable (Windows) y comienza a gestionar la información de tu CV de manera eficaz_](https://drive.google.com/file/d/1kTEz6pPqFvE9S9lor_GgXzbIcnmdQJFT/view?usp=drive_link)
 
 
 ## Comandos 
@@ -110,7 +110,7 @@ haki apply_for_job CV_haki.yaml CV_haki.pdf www.url.com
 * En caso de que la página requiera postularse mediante una cuenta, esta deberá crearse previamente y agregar los datos de inicio en un nuevo archivo yaml.
 
 ~~~
-archivo_login = login_credentials.yaml
+login_credentials.yaml -> archivo_login
 
 credentials(archivo_login):
   mail: roronoa_zoro@mugiwara-no-ichimi.com
