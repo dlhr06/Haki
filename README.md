@@ -73,6 +73,10 @@ education:
   haki get_motivation_letter filename_haki.yaml www.url.com
   ~~~
 
+## Video demostración 🎥
+
+Consulta el [video demostración de Haki](https://drive.google.com/file/d/1HlGD03fOTVwO5_i9uf6cb_krdqvpB-fy/view?usp=drive_link) para descubrir como ejecutar todas las funciones para administrar la información de tu CV
+
 ## Proximamente 🚀
 
 ### Postula de manera automática en cualquier página web
@@ -103,8 +107,8 @@ haki apply_for filename_haki.yaml www.url.com login_credentials.yaml
 
 ## Construido con 🛠️
 
-* [Python](http://www.dropwizard.io/1.0.2/docs/) - El lenguaje de programación base
-* [g4f](https://maven.apache.org/) - Herramienta para manejar modelos de lenguaje como GPT-4.
+* [Python](https://www.python.org/) - El lenguaje de programación base
+* [g4f](https://pypi.org/project/g4f/) - Herramienta para manejar modelos de lenguaje como GPT-4.
 
 
 ## Autores ✒️
