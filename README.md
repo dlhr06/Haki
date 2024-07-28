@@ -4,6 +4,7 @@
 ### Tu Curriculum Vitae de manera eficaz en la web 📑🌐
 
 _Repositorio final para el primer Hackathon virtual "Crea tu propio lenguaje de programación" de Código Facilito_ 💻🐊
+_Desarrollo por: Equipo no.20_ 
 
 ## Descripción 
 
