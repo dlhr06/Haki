@@ -12,7 +12,7 @@ Haki es un innovador lenguaje de programación diseñado específicamente para l
 
 ## Indice 
 
-[Descripción](#descripción) | [Instalación](#instalación) | [Comandos](#comandos) | [Video Demostración](#video-demostración) | [Próximamente](#próximamente) | [Herramientas](#herramientas) | [Autores](#autores) | [Política de Privacidad](#políticadeprivacidad) | [Licencia](#licencia)
+[Descripción](#descripción) | [Instalación](#instalación) | [Comandos](#comandos) | [Video Demostración](#video-demostración) | [Próximamente](#próximamente) | [Herramientas](#herramientas) | [Autores](#autores) | [Política de Privacidad](#política-de-privacidad) | [Licencia](#licencia)
 
 
 
@@ -72,15 +72,9 @@ education:
 ### Genera un resumen profesional 
 * El resumen se genera con base al archivo yaml generado previamente.
   ~~~
-  haki get_professional_summary CV.yaml
+  haki get_professional_summary CV_haki.yaml
   ~~~
   
-
-### Aplica a tu nuevo empleo
-* Ingresa los datos de tu CV de manera automática en la pagina final de postulación
-  ~~~
-  haki apply_for_job CV.yaml www.url.com
-  ~~~
 
 
 ## Video demostración 
@@ -89,8 +83,15 @@ Consulta el [video demostración de Haki](https://drive.google.com/file/d/1HlGD0
 
 ## Próximamente 
 
-### Postula automática en cualquier página web
-* Mediante LLM (publico o privado) realizar sugerencias a la información del CV (crea un nuevo yaml con las sugerencias) y proporcionar porcentaje de ajuste con el puesto
+## Genera una carta de motivaciones de manera automática
+
+~~~
+haki get_motivation_letter CV_haki.yaml
+~~~
+
+### Compara tu perfil con el puesto de trabajo solicitado
+* Mediante LLM (chat-gp3) se pueden realizar sugerencias respecto al CV otorgado, y otorgarnos un archivo yaml con sugerencias y el porcentaje de ajuste de nuestro perfil con el puesto de trabajo.
+
 ~~~
 haki check_position filename_haki.yaml www.url.com
 
@@ -98,13 +99,20 @@ output:
 Tu CV se ajusta 100% a la posición!.
 ~~~
 
+### Postula de manera automática desde la web
+
+* Mediante el modelo LLM selecciona, llena el formulario de postulación a un empleo de manera automática desde una plataforma determinada.
+
 ~~~
-haki apply_for_job filename_haki.yaml www.url.com
+haki apply_for_job CV_haki.yaml CV_haki.pdf www.url.com
 ~~~
 
-* En caso de que la página requiera postularse mediante una cuenta, esta deberá crearse previamente y agregar los datos de inicio en un nuevo archivo yaml. Por ejemplo, en el siguiente archivo yaml, llamado ``login_credentials.yaml``, se muestra el correo y la contraseña utilizados para iniciar sesión en la página de postulación:
+* En caso de que la página requiera postularse mediante una cuenta, esta deberá crearse previamente y agregar los datos de inicio en un nuevo archivo yaml.
+
 ~~~
-credentials:
+archivo_login = login_credentials.yaml
+
+credentials(archivo_login):
   mail: roronoa_zoro@mugiwara-no-ichimi.com
   password: miCapitanSeraElReyDeLosPiratas!
 ~~~
