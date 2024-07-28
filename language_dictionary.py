@@ -58,8 +58,8 @@ arg_output_language = {
     'fr': 'Langue du texte de sortie. Par défaut, c\'est la langue du système.'
 }
 
-insuficient_args = {
-    'es': 'Se requieren al menos dos argumentos.',
-    'en': 'At least two arguments are required.',
-    'fr': 'Au moins deux arguments sont nécessaires.'
+arg_credentials = {
+    'es': 'Nombre del archivo YAML que contiene las credenciales para ingresar a la plataforma de la oferta de trabajo.',
+    'en': 'Name of the YAML file that contains the credentials to access the job offer platform.',
+    'fr': 'Nom du fichier YAML contenant les informations d\'identification pour accéder à la plateforme de l\'offre d\'emploi.'
 }
