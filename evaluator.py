@@ -1,11 +1,12 @@
 from lark import Transformer,v_args
 import yaml
 import os
-from classified_llm import generate_dictionary
 import asyncio
 
+from classified_llm import generate_dictionary
 from semantic import file_exists
 from apply_for_job import apply_job
+from llm import generate_summary
 
 class Evaluator(Transformer):
     def start(self, expression:str) -> str:
@@ -21,9 +22,9 @@ class Evaluator(Transformer):
         if not filename[0]:
             return False
         
-        print(f'Función read_pdf: {filename}')
+        # print(f'Función read_pdf: {filename}')
         filename = filename[0]
-        print(f'filename: {filename}')
+        # print(f'filename: {filename}')
 
         cv_dictionary = generate_dictionary(str(filename))
         
@@ -47,9 +48,11 @@ class Evaluator(Transformer):
             #print(f'Error: {e}')    
         '''
     def get_professional_summary(self, filename:str) -> None:
-        print(f'Función get_professional_summary: {filename}')
+        # print(f'Función get_professional_summary: {filename[0]}')
         # Implementar la lógica para generar un resumen profesional
-        pass
+        filename = str(filename[0])
+        
+        generate_summary(filename)
     
     def get_motivation_letter(self, filename:str) -> None:
         print(f'Función get_motivation_letter: {filename}')
@@ -58,13 +61,13 @@ class Evaluator(Transformer):
     
     @v_args(inline=True)
     async def apply_for_job(self, filename_yaml:str, filename_pdf:str, route:str, credentials:str) -> None:
-        print(f'''
-            Función apply_for_job: 
-            filename yaml: {filename_yaml}
-            filename pdf: {filename_pdf}
-            url: {route}
-            credentials: {credentials}
-            ''')
+        # print(f'''
+        #     Función apply_for_job: 
+        #     filename yaml: {filename_yaml}
+        #     filename pdf: {filename_pdf}
+        #     url: {route}
+        #     credentials: {credentials}
+        #     ''')
         
         await apply_job(filename_yaml, filename_pdf, route, credentials)
 
@@ -77,7 +80,7 @@ class Evaluator(Transformer):
         return False
     
     def filename_yaml(self, filename) -> str|bool:
-        print(f'filename_yaml: {filename[0]}')
+        # print(f'filename_yaml: {filename[0]}')
         if file_exists(filename[0]):
             return filename[0]
         print(f'Error: El archivo {filename[0]} no existe.')
