@@ -45,6 +45,3 @@ def generate_dictionary(file_path: str, target_language: str = 'en', model: str 
         dictionary = {}
 
     return dictionary 
-
-file_path = 'CV_AndrewTest.pdf'
-dictionary = generate_dictionary(file_path)
