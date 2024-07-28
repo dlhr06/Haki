@@ -8,7 +8,7 @@ _Desarrollo por: Equipo no. 20_
 
 ## Descripción 
 
-Haki es un innovador lenguaje de programación diseñado específicamente para leer y administrar la información contenida en tu curriculum vitae, con el objetivo de simplificar el proceso de postulación al automatizar la extracción y el llenado de formularios en diversas plataformas de empleo. 📨🔎
+Haki es un innovador lenguaje de dominio específico (SDL) diseñado específicamente para leer y administrar la información contenida en tu curriculum vitae, con el objetivo de simplificar el proceso de postulación al automatizar la extracción y el llenado de formularios en diversas plataformas de empleo. 📨🔎
 
 ## Indice 
 
