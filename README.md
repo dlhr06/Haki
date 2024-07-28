@@ -12,12 +12,13 @@ Haki es un innovador lenguaje de programación diseñado específicamente para l
 
 ## Indice 
 
-[Homepage](#Descripción) | [Instalación](#Instalación) | [Comandos](#Comandos) | [Video Demostración](#Video) | [Proximamente](#Proximamente) | [Autores](#Autores) | [Politica de Privacidad](#PoliticadePrivacidad)
+[Descripción](#descripción) | [Instalación](#instalación-🔧) | [Comandos](#comandos-💻) | [Video Demostración](#video-demostración-🎥) | [Próximamente](#próximamente-🚀) | [Autores](#autores-✒️) | [Política de Privacidad](#política-de-privacidad-📝) | [Licencia](#licencia-📄)
+
 
 
 ## Instalación 🔧
 
-[_Instala nuestro ejecutable y comienza a gestionar la información de tu CV de manera eficaz_](https://drive.google.com/file/d/1kTEz6pPqFvE9S9lor_GgXzbIcnmdQJFT/view?usp=drive_link)
+[Instala nuestro ejecutable y comienza a gestionar la información de tu CV de manera eficaz_](https://drive.google.com/file/d/1kTEz6pPqFvE9S9lor_GgXzbIcnmdQJFT/view?usp=drive_link)
 
 
 ## Comandos 💻
@@ -83,7 +84,7 @@ education:
 
 Consulta el [video demostración de Haki](https://drive.google.com/file/d/1HlGD03fOTVwO5_i9uf6cb_krdqvpB-fy/view?usp=drive_link) para descubrir como ejecutar todas las funciones para administrar la información de tu CV
 
-## Proximamente 🚀
+## Próximamente 🚀
 
 ### Postula automática en cualquier página web
 * Mediante LLM (publico o privado) realizar sugerencias a la información del CV (crea un nuevo yaml con las sugerencias) y proporcionar porcentaje de ajuste con el puesto
