@@ -136,7 +136,7 @@ haki apply_for filename_haki.yaml www.url.com login_credentials.yaml
 * **Diana Hernández Romero** - *Desarrollador* - [dlhr06](https://github.com/dlhr06)
 
 
-## Politica de Privacidad 
+## Política de Privacidad 
 
 1. Haki no recopila, almacena ni gestiona ninguna información personal identificable. Toda la información y los datos que maneja la aplicación se procesan localmente en su dispositivo.
 2. Haki no recopila ni almacena información sobre el uso de la aplicación. No tenemos acceso a los archivos PDF que lee ni a ninguna otra actividad que realice dentro de la aplicación.
