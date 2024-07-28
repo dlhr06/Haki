@@ -52,7 +52,7 @@ async def main():
     if args.command == 'apply_for_job':        
         await parse_expression(f'{args.command} {args.filename_yaml} {args.filename_pdf} {args.url} {args.credentials}')[0][0][0]
     else:
-        print(parse_expression(f'{args.command} {args.filename}'))
+        parse_expression(f'{args.command} {args.filename}')
     
 if __name__ == '__main__':
     tracemalloc.start()
