@@ -5,7 +5,7 @@ from grammar import grammar
 parser = Lark(grammar, parser='lalr', transformer=Evaluator())
 
 def parse_expression(expression):
-    print(f'expression: {expression}')
+    # print(f'expression: {expression}')
     try:
         return parser.parse(expression)
     except exceptions.UnexpectedToken as e:
