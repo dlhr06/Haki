@@ -1,8 +1,10 @@
 from lark import Transformer,v_args
 import yaml
 import os
+import asyncio
 
-from semantic import file_exists, is_valid_url
+from semantic import file_exists
+from apply_for_job import apply_job
 
 class Evaluator(Transformer):
     def start(self, expression:str) -> str:
@@ -60,14 +62,18 @@ class Evaluator(Transformer):
         pass
     
     @v_args(inline=True)
-    def apply_for_job(self, filename:str, route:str) -> None:
+    async def apply_for_job(self, filename_yaml:str, filename_pdf:str, route:str, credentials:str) -> None:
         print(f'''
             Función apply_for_job: 
-            filename: {filename}
+            filename yaml: {filename_yaml}
+            filename pdf: {filename_pdf}
             url: {route}
+            credentials: {credentials}
             ''')
-        # Implementar la lógica para aplicar a una oferta de trabajo
-        pass
+        
+        await apply_job(filename_yaml, filename_pdf, route, credentials)
+
+    
     
     def filename_pdf(self, filename) -> str|bool:
         if file_exists(filename[0]):
@@ -86,3 +92,9 @@ class Evaluator(Transformer):
         print(f'URL: {url[0]}')
         return url[0]
     
+    def credentials(self, filename) -> str|bool:
+        print(f'filename_yaml: {filename[0]}')
+        if file_exists(filename[0]):
+            return filename[0]
+        print(f'Error: El archivo {filename[0]} no existe.')
+        return False
