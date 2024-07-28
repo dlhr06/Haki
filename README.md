@@ -34,7 +34,7 @@ personal_information:
   phonenumber: "1234567890"
 ~~~
 
-Si desea crear, actualizar o borrar un dato puede hacerlo directamente en el archivo yaml. A continuación, se actualiza el nombre y se agrega información de la educación:
+Si desea crear, actualizar o borrar un dato puede hacerlo directamente en el archivo yaml. 
 ~~~
 personal_information:
   name: Cody
@@ -61,7 +61,7 @@ education:
     year: 2005
 ~~~
 
-### Genera resumen profesional de tus habilidades y logros.
+### Genera un resumen profesional 
 * El resumen se genera con base al archivo yaml generado previamente.
   ~~~
   haki get_professional_summary filename_haki.yaml
@@ -79,7 +79,7 @@ Consulta el [video demostración de Haki](https://drive.google.com/file/d/1HlGD0
 
 ## Proximamente 🚀
 
-### Postula de manera automática en cualquier página web
+### Postula automática en cualquier página web
 * Mediante LLM (publico o privado) realizar sugerencias a la información del CV (crea un nuevo yaml con las sugerencias) y proporcionar porcentaje de ajuste con el puesto
 ~~~
 haki check_position filename_haki.yaml www.url.com
