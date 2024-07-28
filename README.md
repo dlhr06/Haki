@@ -7,7 +7,7 @@ _Repositorio final para el primer Hackathon virtual "Crea tu propio lenguaje de 
 
 ## Descripción 
 
-Haki es un innovador lenguaje de programación diseñado específicamente para leer y administrar la información contenida en el CV del usuario, con el objetivo de facilitar su transferencia a páginas web de postulación a trabajos. Haki simplifica el proceso de postulación al automatizar la extracción y el llenado de formularios en diversas plataformas de empleo. 📨🔎
+Haki es un innovador lenguaje de programación diseñado específicamente para leer y administrar la información contenida en tu curriculum vitae, con el objetivo de simplificar el proceso de postulación al automatizar la extracción y el llenado de formularios en diversas plataformas de empleo. 📨🔎
 
 ### Instalación 🔧
 
