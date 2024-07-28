@@ -1,13 +1,16 @@
+import asyncio
 import argparse
 import locale
+import tracemalloc
 
 from haki_parser import parse_expression
 from language_dictionary import (description, commands, command_read_pdf, command_get_professional_summary,
                                 command_get_motivation_letter, command_apply_for_job, 
-                                arg_pdf_filename, arg_yaml_filename, arg_url
+                                arg_pdf_filename, arg_yaml_filename, arg_url, arg_credentials
                                 )
+from evaluator import Evaluator
 
-def main():
+async def main():
     default_locale, _ = locale.getlocale()
     language = ''
     if default_locale.startswith('es'):
@@ -38,16 +41,20 @@ def main():
 
     # Comando apply_for_job
     parser_apply_for_job = subparsers.add_parser('apply_for_job', help=command_apply_for_job.get(language))
-    parser_apply_for_job.add_argument('filename', type=str, help=arg_yaml_filename.get(language))
+    parser_apply_for_job.add_argument('filename_yaml', type=str, help=arg_yaml_filename.get(language))
+    parser_apply_for_job.add_argument('filename_pdf', type=str, help=arg_pdf_filename.get(language))
     parser_apply_for_job.add_argument('url', type=str, help=arg_url.get(language))
+    parser_apply_for_job.add_argument('credentials', type=str, help=arg_credentials.get(language))
 
     # Parsea los argumentos de la línea de comandos
     args = parser.parse_args()
         
-    if args.command == 'apply_for_job':
-        parse_expression(f'{args.command} {args.filename} {args.url}')
+    if args.command == 'apply_for_job':        
+        await parse_expression(f'{args.command} {args.filename_yaml} {args.filename_pdf} {args.url} {args.credentials}')[0][0][0]
     else:
         print(parse_expression(f'{args.command} {args.filename}'))
     
 if __name__ == '__main__':
-    main()
+    tracemalloc.start()
+    # main()
+    asyncio.run(main())
