@@ -5,7 +5,7 @@
 
 _Repositorio final para el primer Hackathon virtual "Crea tu propio lenguaje de programación" de Código Facilito_ 💻🐊
 
-_Desarrollo por: Equipo no.20_ 
+_Desarrollo por: Equipo no. 20_ 
 
 ## Descripción 
 
