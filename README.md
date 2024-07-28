@@ -25,7 +25,7 @@ Haki es un innovador lenguaje de programación diseñado específicamente para l
 
 ### Lee CV en formato PDF. 
 ~~~
-haki read_pdf filename.pdf
+haki read_pdf CV.pdf
 ~~~
 
 Al leer el documento PDF, se crea un archivo *yaml* con el nombre del PDF más "_haki". Ejemplo: cv_zoro_roronoa.pdf -> cv_zoro_roronoa_haki.yaml. El archivo yaml contiene la información del pdf, como se muestra a continuación:
@@ -68,16 +68,17 @@ education:
     year: 2005
 ~~~
 
+
 ### Genera un resumen profesional 
 * El resumen se genera con base al archivo yaml generado previamente.
   ~~~
-  haki get_professional_summary filename_haki.yaml
+  haki get_professional_summary CV.yaml
   ~~~
   
 ### Genera carta de motivaciones. 
 * El resumen se genera con base al archivo yaml generado previamente y la información del puesto de trabajo al que se desea aplicar (ulr).
   ~~~
-  haki get_motivation_letter filename_haki.yaml www.url.com
+  haki get_motivation_letter CV.yaml www.url.com
   ~~~
 
 ## Video demostración 
