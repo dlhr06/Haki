@@ -19,9 +19,12 @@ class Evaluator(Transformer):
         if not filename[0]:
             return False
         
+        print(f'Función read_pdf: {filename}')
         filename = filename[0]
-        generate_dictionary(filename)
+        print(f'filename: {filename}')
 
+        cv_dictionary = generate_dictionary(str(filename))
+        
         '''cv_dictionary = generate_dictionary(filename)
 
         # Convertir el diccionario a formato yaml
