@@ -75,11 +75,13 @@ education:
   haki get_professional_summary CV.yaml
   ~~~
   
-### Genera carta de motivaciones. 
-* El resumen se genera con base al archivo yaml generado previamente y la información del puesto de trabajo al que se desea aplicar (ulr).
+
+### Aplica a tu nuevo empleo
+* Ingresa los datos de tu CV de manera automática en la pagina final de postulación
   ~~~
-  haki get_motivation_letter CV.yaml www.url.com
+  haki apply_for_job CV.yaml www.url.com
   ~~~
+
 
 ## Video demostración 
 
