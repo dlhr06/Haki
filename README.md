@@ -23,7 +23,7 @@ Haki es un innovador lenguaje de programación diseñado específicamente para l
 
 ## Comandos 
 
-### Lee CV en formato PDF. 
+### Procesa tu CV en formato PDF. 
 ~~~
 haki read_pdf CV.pdf
 ~~~
