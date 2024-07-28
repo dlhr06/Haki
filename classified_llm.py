@@ -1,6 +1,6 @@
 from g4f.client import Client
 import asyncio
-asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+#asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 import pymupdf
 client = Client()
         
