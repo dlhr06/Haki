@@ -20,8 +20,9 @@ class Evaluator(Transformer):
             return False
         
         filename = filename[0]
+        generate_dictionary(filename)
 
-        cv_dictionary = generate_dictionary(filename)
+        '''cv_dictionary = generate_dictionary(filename)
 
         # Convertir el diccionario a formato yaml
         yaml_data = yaml.dump(cv_dictionary,default_flow_style=False, allow_unicode=True)
@@ -37,9 +38,9 @@ class Evaluator(Transformer):
             with open(yaml_filename, 'w') as f:
                 f.write(yaml_data)
             print(f'YAML file created in: {yaml_filename}')
-        except Exception as e:
-            print(f'Error: {e}')    
-    
+        #except Exception as e:
+            #print(f'Error: {e}')    
+        '''
     def get_professional_summary(self, filename:str) -> None:
         print(f'Función get_professional_summary: {filename}')
         # Implementar la lógica para generar un resumen profesional

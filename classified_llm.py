@@ -35,7 +35,7 @@ def generate_dictionary(file_path: str, target_language: str = 'en', model: str 
     )
 
     response_text = response.choices[0].message.content
-    #print(response_text)
+    print(response_text)
     dictionary_start = response_text.find('dictionary: ') + len('dictionary: ')
     dictionary_text = response_text[dictionary_start:].strip()
 
