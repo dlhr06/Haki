@@ -1,6 +1,5 @@
 # Haki 
 
-
 ### Tu Curriculum Vitae de manera eficaz en la web 📑🌐
 
 _Repositorio final para el primer Hackathon virtual "Crea tu propio lenguaje de programación" de Código Facilito_ 💻🐊
@@ -11,7 +10,12 @@ _Desarrollo por: Equipo no. 20_
 
 Haki es un innovador lenguaje de programación diseñado específicamente para leer y administrar la información contenida en tu curriculum vitae, con el objetivo de simplificar el proceso de postulación al automatizar la extracción y el llenado de formularios en diversas plataformas de empleo. 📨🔎
 
-### Instalación 🔧
+## Indice 
+
+[Homepage](#Descripción) | [Instalación](#Instalación) | [Comandos](#Comandos) | [Video Demostración](#Video) | [Proximamente](#Proximamente) | [Autores](#Autores) | [Politica de Privacidad](#PoliticadePrivacidad)
+
+
+## Instalación 🔧
 
 [_Instala nuestro ejecutable y comienza a gestionar la información de tu CV de manera eficaz_](https://drive.google.com/file/d/1kTEz6pPqFvE9S9lor_GgXzbIcnmdQJFT/view?usp=drive_link)
 
