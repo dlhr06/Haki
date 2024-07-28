@@ -26,6 +26,7 @@ def main():
     # Comando read_pdf
     parser_read_pdf = subparsers.add_parser('read_pdf', help=command_read_pdf.get(language))
     parser_read_pdf.add_argument('filename', type=str, help=arg_pdf_filename.get(language))
+
     
     # Comando get_professional_summary
     parser_get_professional_summary = subparsers.add_parser('get_professional_summary', help=command_get_professional_summary.get(language))

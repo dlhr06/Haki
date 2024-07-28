@@ -7,6 +7,7 @@ commands: read_pdf
         | get_professional_summary
         | get_motivation_letter
         | apply_for_job
+        
 
 read_pdf: "read_pdf" filename_pdf
 

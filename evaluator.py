@@ -1,8 +1,9 @@
 from lark import Transformer,v_args
 import yaml
 import os
+from classified_llm import generate_dictionary
 
-from semantic import file_exists, is_valid_url
+from semantic import file_exists
 
 class Evaluator(Transformer):
     def start(self, expression:str) -> str:
@@ -18,22 +19,13 @@ class Evaluator(Transformer):
         if not filename[0]:
             return False
         
-        print(f'Función read_pdf: {filename}')
         filename = filename[0]
-        print(f'filename: {filename}')
-        
-        # Implementar la lógica para leer el pdf
-        
-        # Diccionario (ficticio) obtenido del texto del pdf
-        cv_data = {
-            "personal_information": {
-                "name": "Julian",
-                "age": 20
-            }
-        }
+        generate_dictionary(filename)
+
+        '''cv_dictionary = generate_dictionary(filename)
 
         # Convertir el diccionario a formato yaml
-        yaml_data = yaml.dump(cv_data,default_flow_style=False, allow_unicode=True)
+        yaml_data = yaml.dump(cv_dictionary,default_flow_style=False, allow_unicode=True)
         
         # Obtener el directorio actual de trabajo
         current_dir = os.getcwd()
@@ -46,9 +38,9 @@ class Evaluator(Transformer):
             with open(yaml_filename, 'w') as f:
                 f.write(yaml_data)
             print(f'YAML file created in: {yaml_filename}')
-        except Exception as e:
-            print(f'Error: {e}')    
-    
+        #except Exception as e:
+            #print(f'Error: {e}')    
+        '''
     def get_professional_summary(self, filename:str) -> None:
         print(f'Función get_professional_summary: {filename}')
         # Implementar la lógica para generar un resumen profesional
