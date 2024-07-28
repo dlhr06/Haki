@@ -1,6 +1,7 @@
 from lark import Transformer,v_args
 import yaml
 import os
+from classified_llm import generate_dictionary
 
 from semantic import file_exists
 
@@ -18,22 +19,12 @@ class Evaluator(Transformer):
         if not filename[0]:
             return False
         
-        print(f'Función read_pdf: {filename}')
         filename = filename[0]
-        print(f'filename: {filename}')
-        
-        # Implementar la lógica para leer el pdf
-        
-        # Diccionario (ficticio) obtenido del texto del pdf
-        cv_data = {
-            "personal_information": {
-                "name": "Julian",
-                "age": 20
-            }
-        }
+
+        cv_dictionary = generate_dictionary(filename)
 
         # Convertir el diccionario a formato yaml
-        yaml_data = yaml.dump(cv_data,default_flow_style=False, allow_unicode=True)
+        yaml_data = yaml.dump(cv_dictionary,default_flow_style=False, allow_unicode=True)
         
         # Obtener el directorio actual de trabajo
         current_dir = os.getcwd()

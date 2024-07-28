@@ -16,6 +16,7 @@ command_read_pdf = {
     'fr': 'Commande pour extraire des informations d\'un fichier PDF.'
 }
 
+
 command_get_professional_summary = {
     'es': 'Comando para generar un resumen profesional a partir de un archivo YAML.',
     'en': 'Command to generate a professional summary from a YAML file.',
