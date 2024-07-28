@@ -1,6 +1,6 @@
 from g4f.client import Client
-import asyncio
-asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+# import asyncio
+# asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 client = Client()
         
@@ -36,5 +36,5 @@ def generate_summary(yaml_file:str, target_language:str='es', model:str = 'gpt-3
     
     print(response.choices[0].message.content)
 
-generate_summary('ejemplo_yaml.yaml',)
+# generate_summary('ejemplo_yaml.yaml',)
 
