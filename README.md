@@ -90,7 +90,7 @@ haki get_motivation_letter CV_haki.yaml
 ~~~
 
 ### Compara tu perfil con el puesto de trabajo solicitado
-* Mediante LLM (chat-gp3) se pueden realizar sugerencias respecto al CV otorgado, y otorgarnos un archivo yaml con sugerencias y el porcentaje de ajuste de nuestro perfil con el puesto de trabajo.
+* Mediante un modelo LLM (chat-gp3) se pueden realizar sugerencias respecto al CV, y otorgarnos un archivo yaml con sugerencias y el porcentaje de ajuste de nuestro perfil con el puesto de trabajo.
 
 ~~~
 haki check_position filename_haki.yaml www.url.com
