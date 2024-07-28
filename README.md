@@ -127,6 +127,11 @@ haki apply_for filename_haki.yaml www.url.com login_credentials.yaml
 
 * [Python](https://www.python.org/) - El lenguaje de programación base
 * [g4f](https://pypi.org/project/g4f/) - Herramienta para manejar modelos de lenguaje como GPT-4.
+* [Yaml](https://pypi.org/project/PyYAML/) - Analizador y emisor YAML para Python.
+* [Lark](https://pypi.org/project/g4f/) - Biblioteca de análisis de gramática libre de contexto. 
+* [Argparse](https://docs.python.org/3/library/argparse.html) - Módulo que permite la escritura de interfaces de línea de comandos fáciles de usar.
+* [Playwright](https://playwright.dev/python/docs/intro) - Herramienta de automatización de navegador.
+* [Inno Setup](https://pypi.org/project/innosetup/) - Administrador de versiones de instalación. 
 
 
 ## Autores 
