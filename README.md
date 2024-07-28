@@ -12,11 +12,11 @@ Haki es un innovador lenguaje de programación diseñado específicamente para l
 
 ## Indice 
 
-[Descripción](#descripción) | [Instalación](#instalación-🔧) | [Comandos](#comandos) | [Video Demostración](#video-demostración-🎥) | [Próximamente](#próximamente) | [Autores](#autores-✒️) | [Política de Privacidad](#política-de-privacidad-📝) | [Licencia](#licencia-📄)
+[Descripción](#descripción) | [Instalación](#instalación) | [Comandos](#comandos) | [Video Demostración](#video-demostración) | [Próximamente](#próximamente) | [Herramientas]{#herramientas} | [Autores](#autores) | [Política de Privacidad](#política-de-privacidad) | [Licencia](#licencia-📄)
 
 
 
-## Instalación 🔧
+## Instalación 
 
 [Instala nuestro ejecutable y comienza a gestionar la información de tu CV de manera eficaz_](https://drive.google.com/file/d/1kTEz6pPqFvE9S9lor_GgXzbIcnmdQJFT/view?usp=drive_link)
 
@@ -80,11 +80,11 @@ education:
   haki get_motivation_letter filename_haki.yaml www.url.com
   ~~~
 
-## Video demostración 🎥
+## Video demostración 
 
 Consulta el [video demostración de Haki](https://drive.google.com/file/d/1HlGD03fOTVwO5_i9uf6cb_krdqvpB-fy/view?usp=drive_link) para descubrir como ejecutar todas las funciones para administrar la información de tu CV
 
-## Próximamente 🚀
+## Próximamente 
 
 ### Postula automática en cualquier página web
 * Mediante LLM (publico o privado) realizar sugerencias a la información del CV (crea un nuevo yaml con las sugerencias) y proporcionar porcentaje de ajuste con el puesto
@@ -112,27 +112,27 @@ haki apply_for filename_haki.yaml www.url.com login_credentials.yaml
 ~~~
 
 
-## Construido con 🛠️
+## Herramientas
 
 * [Python](https://www.python.org/) - El lenguaje de programación base
 * [g4f](https://pypi.org/project/g4f/) - Herramienta para manejar modelos de lenguaje como GPT-4.
 
 
-## Autores ✒️
+## Autores 
 
 * **Juan Arias Castillo** - *Desarrollador* - [jariasca9](https://github.com/jariasca9)
 
 * **Diana Hernández Romero** - *Desarrollador* - [dlhr06](https://github.com/dlhr06)
 
 
-## Politica de Privacidad 📝
+## Politica de Privacidad 
 
 1. Haki no recopila, almacena ni gestiona ninguna información personal identificable. Toda la información y los datos que maneja la aplicación se procesan localmente en su dispositivo.
 2. Haki no recopila ni almacena información sobre el uso de la aplicación. No tenemos acceso a los archivos PDF que lee ni a ninguna otra actividad que realice dentro de la aplicación.
 3. Toda la información y los datos procesados por Haki se almacenan localmente en su dispositivo. No se transmite ninguna información a servidores externos ni a terceros.
 4. Aunque Haki no maneja datos personales, recomendamos a los usuarios que protejan sus dispositivos con medidas de seguridad adecuadas, como contraseñas fuertes y software antivirus, para asegurar la integridad de sus datos locales.
 
-## Licencia 📄
+## Licencia 
 
 Este proyecto está bajo la Licencia (Haki Corps S.A) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
 
