@@ -16,7 +16,7 @@ Haki es un innovador lenguaje de programación diseñado específicamente para l
 
 
 
-## Instalación 
+## Instalación ⚙️
 
 [Instala nuestro ejecutable y comienza a gestionar la información de tu CV de manera eficaz_](https://drive.google.com/file/d/1kTEz6pPqFvE9S9lor_GgXzbIcnmdQJFT/view?usp=drive_link)
 
